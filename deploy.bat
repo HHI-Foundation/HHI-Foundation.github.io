@@ -40,8 +40,9 @@ if %errorlevel% neq 0 (
 
 echo.
 echo 输入提交信息（默认为"更新内容"）：
-set /p COMMIT_MSG=提交信息：
-if "%COMMIT_MSG%"=="" set COMMIT_MSG=更新内容
+set "COMMIT_MSG="
+set /p "COMMIT_MSG=提交信息："
+if "%COMMIT_MSG%"=="" set "COMMIT_MSG=更新内容"
 
 REM 提交更改
 git commit -m "%COMMIT_MSG%"
