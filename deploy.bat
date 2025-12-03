@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 REM Git 自动推送批处理脚本
 
 REM 设置项目目录
